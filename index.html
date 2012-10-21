@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>Game Title Generator</title>
+  <link href='http://fonts.googleapis.com/css?family=IM+Fell+Great+Primer+SC' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" charset="utf-8" src="roam_edgePreload.js"></script>
+  <style>
+      .edgeLoad-EDGE-93243600 { visibility:hidden; }
+  </style>
+  <style>
+    #wrapper { width: 600px; margin: 0 auto; }
+    .title { text-align: center; font-family: "IM Fell Great Primer SC"; }
+    .generate { text-align: center; }
+    .generate > button { width: 150px; height: 32px; }
+  </style>
+</head>
+
+<body>
+  <div id="wrapper">
+    <h1 id="game-title" class="title"></h1>
+    <div id="Stage" class="EDGE-93243600">
+    </div>
+    <hr/>
+    <div class="generate">
+      <button name="Generate" onclick="generateRandomTitle()">Another</button>
+    </div>
+  </div>
+
+  <script>
+    var firstWord = [
+      "Legend",
+      "Battle",
+      "Quest",
+      "Sword",
+      "Lord",
+      "Clash",
+      "Empire",
+      "Rage",
+      "Age",
+      "War",
+      "Rise",
+      "Uprising",
+      "Revolt",
+      "Revenge",
+      "Requiem",
+      "Duel",
+      "Tower",
+      "King",
+      "Kingdom",
+      "Ring",
+      "Circle",
+      "Rite",
+      "Hero",
+      "Conquest",
+      "Hunt",
+      "Fight",
+      "Blade",
+      "Master",
+      "Masters",
+      "Warrior",
+      "Warriors",
+      "Legacy",
+      "Mountain",
+      "Valley",
+      "Dawn",
+      "Magic",
+      "Jewel",
+      "World",
+      "Song",
+      "Arena",
+    ];
+    var secondWord = [
+      "Bahamut",
+      "Cerberus",
+      "Odin",
+      "Camelot",
+      "Avalon",
+
+      "the Dragons",
+      "the Lords",
+      "the Castle",
+      "the Empires",
+      "the Thrones",
+      "the Clans",
+      "the Knights",
+      "the Crystals",
+      "the Wizards",
+      "the Guardian",
+      "the Werewolf",
+      "the Monsters",
+      "the Demons",
+      "the Gods",
+      "the Elements",
+      "the Kings",
+      "the Kingdom",
+      "the Berzerker",
+      "the Heroes",
+      "the Angels",
+      "the Beast",
+      "the Devil",
+      "the Guild",
+      "the Titans",
+      "the Minotaur",
+      "the Kraken",
+      "the Dragon",
+
+      "Fate",
+      "Eternity",
+      "Fantasy",
+      "God",
+      "Fire",
+      "Darkness",
+    ];
+
+    function generateRandomTitle()
+    {
+      var first  = parseInt(Math.random()*firstWord.length);
+      var second = parseInt(Math.random()*secondWord.length);
+      document.getElementById("game-title").innerHTML = (firstWord[first] + " of " + secondWord[second]);
+    }
+
+    generateRandomTitle();
+
+  </script>
+</body>
+</html>
